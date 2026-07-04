@@ -7,16 +7,17 @@
 }
 
 :root {
-    --fundoPrincipal: #f4f0e7;
-    --branco: #ffffff;
+    --fundoPrincipal: #f4eee7;
+    --card: #fffdf8;
 
-    --marromEscuro: #3b211b;
+    --marromEscuro: #3b211c;
     --marromClaro: #c98e5a;
+    --marromMedio: #9c5f35;
 
-    --textoPrincipal: #3b211b;
-    --textoSecundario: #6f625b;
+    --textoPrincipal: #3b211c;
+    --textoSecundario: #4f403b;
 
-    --borda: #ddd4c7;
+    --borda: #e2d5c4;
 
     --raioPilula: 999px;
 }
@@ -33,11 +34,7 @@ body {
 
     font-family: "Poppins", Arial, sans-serif;
     background-color: var(--fundoPrincipal);
-    color: var(--textoPrincipal);
-}
-
-main {
-    flex: 1;
+    color: var(--textoSecundario);
 }
 
 a {
@@ -64,45 +61,44 @@ img {
 
 /* Cabeçalho */
 .cabecalho {
-    width: 100%;
-    height: 64px;
-    background-color: var(--fundoPrincipal);
-    border-bottom: 1px solid rgba(221, 212, 199, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--fundoPrincipal);
+    border-bottom: 1px solid var(--borda);
 }
 
 .conteudoCabecalho {
-    height: 100%;
+    min-height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
 }
 
 /* Logo */
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
-
-    font-size: 18px;
-    font-weight: 700;
+    gap: 10px;
     color: var(--marromEscuro);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
 }
 
 .iconeLogo {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--marromEscuro);
-    color: var(--branco);
-    font-size: 16px;
+    background: var(--marromEscuro);
+    color: var(--card);
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
 }
 
-.logo span strong {
+.logo strong {
     color: var(--marromClaro);
 }
 
@@ -110,41 +106,36 @@ img {
 .navegacaoCabecalho {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 18px;
 }
 
 .navegacaoCabecalho a {
     padding: 8px 16px;
     border-radius: var(--raioPilula);
-
     font-size: 14px;
     font-weight: 500;
     color: var(--marromEscuro);
-
     transition: 0.2s;
 }
 
 .navegacaoCabecalho a:hover,
 .navegacaoCabecalho a.ativo {
     background-color: #e9dfd0;
+    color: var(--marromEscuro);
 }
 
 /* Botão principal */
 .botaoPrimario {
     min-height: 42px;
-    padding: 0 20px;
+    padding: 13px 20px;
     border-radius: var(--raioPilula);
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     background-color: var(--marromEscuro);
-    color: var(--branco);
-
+    color: var(--card);
     font-size: 14px;
     font-weight: 600;
-
     border: none;
     transition: 0.2s;
 }
@@ -155,7 +146,7 @@ img {
 
 /* Rodapé */
 .rodape {
-    background-color: var(--branco);
+    background-color: var(--card);
     border-top: 1px solid rgba(221, 212, 199, 0.7);
 }
 
@@ -198,7 +189,7 @@ img {
 }
 
 .navegacaoRodape a:hover {
-    color: var(--marromEscuro);
+    color: var(--marromClaro);
 }
 
 .baseRodape {

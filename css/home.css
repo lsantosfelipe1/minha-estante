@@ -1,0 +1,193 @@
+/* Hero */
+
+.hero {
+    min-height: 740px;
+    display: flex;
+    align-items: center;
+}
+
+.conteudoHero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.etiquetaHero {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: var(--raioPilula);
+    padding: 8px 12px;
+    margin: 22px 0;
+    display: inline-block;
+    color: var(--marromClaro);
+    font-weight: 700;
+    font-size: 0.72rem;
+}
+
+.textoHero h1 {
+    margin-bottom: 26px;
+    font-size: clamp(3rem, 7vw, 5.8rem);
+    line-height: 0.9;
+    color: var(--textoPrincipal);
+}
+
+.textoHero h1 span {
+    color: var(--marromClaro);
+}
+
+.textoHero p {
+    max-width: 520px;
+    margin-bottom: 28px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.botoesHero {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* Estatisticas*/
+
+.estatisticas {
+    display: flex;
+    gap: 16px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.cardEstatistica {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    min-width: 140px;
+    padding: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.05);
+}
+
+.cardEstatistica small {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.cardEstatistica strong {
+    display: block;
+    color: var(--marromEscuro);
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.cardEstatistica span {
+    font-size: 0.78rem;
+    color: var(--textoSecundario);
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+}
+
+/* Desenho hero */
+
+.imagemHero {
+    min-height: 360px;
+    background: linear-gradient(135deg, #fbecd0, #fff7df);
+    border: 1px solid var(--borda);
+    border-radius: 26px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+    position: relative;
+}
+
+.pilhaLivros {
+    min-width: 360px;
+}
+
+.livroDecorativo {
+    height: 36px;
+    border-radius: 10px 12px 10px 12px;
+    margin: 0 auto 8px;
+    box-shadow: inset 18px 0 rgba(255, 255, 255, 0.16), 0 8px 15px rgba(59, 33, 28, 0.15);
+}
+
+.livroUm {
+    width: 75%;
+    background: var(--marromEscuro);
+}
+
+.livroDois {
+    width: 90%;
+    background: var(--marromMedio);
+}
+
+.livroTres {
+    width: 100%;
+    background: var(--marromEscuro);
+}
+
+.livroQuatro {
+    width: 85%;
+    background: var(--marromMedio);
+}
+
+.ultimoLivroLido {
+    position: absolute;
+    left: -24px;
+    bottom: -20px;
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 14px 18px;
+}
+
+.ultimoLivroLido small {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--textoSecundario);
+}
+
+.ultimoLivroLido strong {
+    color: var(--marromEscuro);
+}
+
+/* Destaques */
+
+.secaoDestaques {
+    padding: 88px 0;
+}
+
+.cabecalhoLinha {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+.etiquetaSecao {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--marromClaro);
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.linkTexto {
+    font-weight: 700;
+    color: var(--marromEscuro);
+    text-decoration: none;
+}
+
+.linkTexto:hover {
+    color: var(--marromClaro);
+}
+
+.gradeDestaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}

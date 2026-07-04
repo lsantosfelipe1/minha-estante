@@ -27,7 +27,46 @@
         </header>
 
         <main>
-            <!-- Conteúdo específico da página -->
+            <section class="secaoCatalogo">
+                <div class="container">
+                    <div class="cabecalhoSecao">
+                        <span class="etiquetaSecao">Catálogo</span>
+
+                        <h2>Sua estante completa</h2>
+
+                        <p>
+                            <span id="contadorCatalogo">0</span>
+                            livros encontrados. Pesquise, filtre e mergulhe em uma nova leitura.
+                        </p>
+                    </div>
+
+                    <div class="filtrosCatalogo">
+                        <input
+                            type="text"
+                            id="campoBusca"
+                            class="campoBusca"
+                            placeholder="Buscar por título ou autor..."
+                        />
+
+                        <select id="filtroCategoria">
+                            <option value="todos">Todas as categorias</option>
+                        </select>
+
+                        <select id="filtroStatus">
+                            <option value="todos">Todos os status</option>
+                            <option value="Lido">Lido</option>
+                            <option value="Lendo">Lendo</option>
+                            <option value="Quero ler">Quero ler</option>
+                        </select>
+
+                        <a href="admin.html" class="botaoPrimario botaoPequeno">
+                            + Adicionar livro
+                        </a>
+                    </div>
+
+                    <div id="listaLivros"></div>
+                </div>
+            </section>
         </main>
 
         <footer class="rodape">

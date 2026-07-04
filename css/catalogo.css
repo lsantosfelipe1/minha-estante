@@ -1,0 +1,44 @@
+.secaoCatalogo {
+    padding: 88px 0;
+}
+
+.cabecalhoSecao {
+    margin-bottom: 36px;
+}
+
+.etiquetaSecao {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--marromClaro);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.filtrosCatalogo {
+    display: flex;
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 22px;
+    gap: 16px;
+    padding: 14px;
+    box-shadow: var(--sombra);
+    margin-bottom: 36px;
+}
+
+.filtrosCatalogo input,
+.filtrosCatalogo select {
+    font-family: "Poppins", Arial, sans-serif;
+    min-height: 46px;
+    border-radius: var(--raioPilula);
+    border: 1px solid var(--borda);
+    background: #f8f2e8;
+    color: var(--textoSecundario);
+    padding: 0 18px;
+    outline: none;
+}
+
+.filtrosCatalogo input {
+    flex: 1;
+    min-width: 260px;
+}

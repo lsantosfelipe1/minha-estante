@@ -6,6 +6,11 @@
     margin-bottom: 36px;
 }
 
+.cabecalhoSecao h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--marromEscuro);
+}
+
 .etiquetaSecao {
     display: inline-block;
     margin-bottom: 8px;
@@ -17,6 +22,7 @@
 
 .filtrosCatalogo {
     display: flex;
+    max-height: 70px;
     background: var(--card);
     border: 1px solid var(--borda);
     border-radius: 22px;
@@ -29,7 +35,7 @@
 .filtrosCatalogo input,
 .filtrosCatalogo select {
     font-family: "Poppins", Arial, sans-serif;
-    min-height: 46px;
+    max-height: 46px;
     border-radius: var(--raioPilula);
     border: 1px solid var(--borda);
     background: #f8f2e8;
@@ -41,4 +47,73 @@
 .filtrosCatalogo input {
     flex: 1;
     min-width: 260px;
+}
+
+.listaLivros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.cardLivro {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 14px;
+}
+
+.capaLivro {
+    background: linear-gradient(145deg, #73504a, #d19a62);
+    min-height: 285px;
+    border-radius: 18px;
+    padding: 24px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.capaLivro small {
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    font-size: 0.66rem;
+    opacity: 0.8;
+}
+
+.capaLivro strong {
+    font-size: 1.05rem;
+}
+
+.informacoesLivro {
+    padding: 18px 4px 6px;
+}
+
+.informacoesLivro h3 {
+    color: var(--dark);
+    line-height: 1.15;
+    margin-bottom: 5px;
+}
+
+.informacoesLivro p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.etiquetasLivro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.etiqueta {
+    background: var(--fundoPrincipal);
+    border: 1px solid var(--border);
+    color: var(--dark);
+    border-radius: 999px;
+    padding: 5px 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
 }

@@ -65,7 +65,7 @@
     border-radius: 20px;
     min-width: 140px;
     padding: 18px;
-    box-shadow: 0 15px 35px rgba(0,0,0,.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
 
 .cardEstatistica small {
@@ -96,7 +96,7 @@
     border-radius: 26px;
     display: grid;
     place-items: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     position: relative;
 }
 
@@ -108,7 +108,9 @@
     height: 36px;
     border-radius: 10px 12px 10px 12px;
     margin: 0 auto 8px;
-    box-shadow: inset 18px 0 rgba(255, 255, 255, 0.16), 0 8px 15px rgba(59, 33, 28, 0.15);
+    box-shadow:
+        inset 18px 0 rgba(255, 255, 255, 0.16),
+        0 8px 15px rgba(59, 33, 28, 0.15);
 }
 
 .livroUm {
@@ -131,7 +133,7 @@
     background: var(--marromMedio);
 }
 
-.ultimoLivroLido {
+.ultimoLivro {
     position: absolute;
     left: -24px;
     bottom: -20px;
@@ -141,13 +143,13 @@
     padding: 14px 18px;
 }
 
-.ultimoLivroLido small {
+.ultimoLivro small {
     display: block;
     margin-bottom: 6px;
     color: var(--textoSecundario);
 }
 
-.ultimoLivroLido strong {
+.ultimoLivro strong {
     color: var(--marromEscuro);
 }
 
@@ -162,6 +164,12 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 24px;
+    margin-bottom: 34px;
+}
+
+.cabecalhoLinha h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--marromEscuro);
 }
 
 .etiquetaSecao {
@@ -188,6 +196,35 @@
 
 .gradeDestaques {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.cardDestaque {
+    text-decoration: none;
+    color: var(--textoPrincipal);
+}
+
+.capaDestaque {
+    background: linear-gradient(145deg, #73504a, #d19a62);
+    border-radius: 20px;
+    min-height: 310px;
+    padding: 24px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 16px 35px rgba(59, 33, 28, 0.12);
+}
+
+.cardDestaque small {
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    font-size: 0.66rem;
+    opacity: 0.8;
+}
+
+.cardDestaque h3 {
+    color: var(--textoPrincipal);
+    margin: 14px 0 4px;
 }

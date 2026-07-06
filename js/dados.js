@@ -69,7 +69,7 @@ let livros = carregarLivros();
 
 //funcao para carregar os livros do localStorage, caso não haja livros salvos, retorna os livros iniciais
 function carregarLivros() {
-    const livrosSalvos = localStorage.getItem("livros");
+    const livrosSalvos = localStorage.getItem("livrosMinhaEstante");
 
     if (livrosSalvos) {
         return JSON.parse(livrosSalvos);

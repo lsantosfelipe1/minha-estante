@@ -1,0 +1,288 @@
+.secaoAdmin {
+    padding: 88px 0;
+}
+
+.cabecalhoSecao {
+    margin-bottom: 36px;
+}
+
+.etiquetaSecao {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--marromClaro);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cabecalhoSecao h1 {
+    color: var(--textoPrincipal);
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.cabecalhoSecao p {
+    max-width: 620px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--textoSecundario);
+}
+
+.gradeAdmin {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 32px;
+    align-items: stretch;
+}
+
+.cartaoAdmin {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 15px 35px rgba(59, 33, 28, 0.08);
+}
+
+.cartaoFormulario {
+    min-height: 610px;
+}
+
+.cabecalhoCartao {
+    margin-bottom: 26px;
+}
+
+.cabecalhoCartao h2 {
+    margin-bottom: 8px;
+    color: var(--textoPrincipal);
+    font-size: 1.45rem;
+    line-height: 1.2;
+}
+
+.cabecalhoCartao p {
+    color: var(--textoSecundario);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.formularioLivro {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.grupoCampo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupoCampo label,
+.grupoStatus legend {
+    color: var(--textoPrincipal);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.linhaCampos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.formularioLivro input,
+.formularioLivro select,
+.formularioLivro textarea {
+    width: 100%;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background: #f8f2e8;
+    color: var(--textoSecundario);
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+.formularioLivro input,
+.formularioLivro select {
+    min-height: 52px;
+    padding: 0 18px;
+}
+
+.formularioLivro textarea {
+    min-height: 120px;
+    padding: 16px 18px;
+    resize: vertical;
+}
+
+.formularioLivro input::placeholder,
+.formularioLivro textarea::placeholder {
+    color: #a8988c;
+}
+
+.formularioLivro input:focus,
+.formularioLivro select:focus,
+.formularioLivro textarea:focus {
+    border-color: var(--marromMedio);
+    background: #fffaf2;
+    box-shadow: 0 0 0 4px rgba(156, 95, 53, 0.12);
+}
+
+.grupoStatus {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.opcoesStatus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.opcoesStatus input {
+    display: none;
+}
+
+.opcoesStatus label {
+    min-height: 38px;
+    padding: 9px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--borda);
+    border-radius: var(--raioPilula);
+    background: #f8f2e8;
+    color: var(--textoSecundario);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.opcoesStatus label:hover {
+    border-color: var(--marromMedio);
+    color: var(--marromEscuro);
+}
+
+.opcoesStatus input:checked+label {
+    background: var(--marromEscuro);
+    border-color: var(--marromEscuro);
+    color: var(--card);
+}
+
+.botaoSalvar {
+    width: fit-content;
+    margin-top: auto;
+    border: 0;
+}
+
+/* Lista do acervo */
+
+.listaLivrosAdmin {
+    display: flex;
+    flex-direction: column;
+}
+
+.itemLivroAdmin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.itemLivroAdmin:first-child {
+    padding-top: 0;
+}
+
+.itemLivroAdmin:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.dadosLivroAdmin h3 {
+    margin-bottom: 4px;
+    color: var(--textoPrincipal);
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.dadosLivroAdmin p {
+    color: var(--textoSecundario);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.etiquetaStatus {
+    flex-shrink: 0;
+    min-width: 84px;
+    padding: 7px 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--borda);
+    border-radius: var(--raioPilula);
+    background: #f8f2e8;
+    color: var(--textoSecundario);
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.statusLido {
+    color: var(--marromEscuro);
+}
+
+.statusLendo {
+    color: var(--marromMedio);
+}
+
+.statusQueroLer {
+    color: var(--textoSecundario);
+}
+
+@media (max-width: 900px) {
+    .gradeAdmin {
+        grid-template-columns: 1fr;
+    }
+
+    .cartaoFormulario {
+        min-height: auto;
+    }
+
+    .formularioLivro {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .secaoAdmin {
+        padding: 64px 0;
+    }
+
+    .cartaoAdmin {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .linhaCampos {
+        grid-template-columns: 1fr;
+    }
+
+    .itemLivroAdmin {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .etiquetaStatus {
+        min-width: auto;
+    }
+
+    .botaoSalvar {
+        width: 100%;
+    }
+}

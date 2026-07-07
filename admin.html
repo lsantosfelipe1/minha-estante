@@ -1,156 +1,187 @@
 <!doctype html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Minha Estante | Administração</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minha Estante | Administração</title>
+        <link rel="shortcut icon" type="imagex/png" href="./assets/logo.ico" />
 
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/admin.css" />
-</head>
+        <link rel="stylesheet" href="css/global.css" />
+        <link rel="stylesheet" href="css/admin.css" />
+    </head>
 
-<body>
-    <header class="cabecalho">
-        <div class="container conteudoCabecalho">
-            <a href="index.html" class="logo">
-                <span class="iconeLogo">📖</span>
-                <span>Minha <strong>Estante</strong></span>
-            </a>
-
-            <nav class="navegacaoCabecalho">
-                <a href="index.html">Home</a>
-                <a href="catalogo.html">Catálogo</a>
-                <a href="admin.html" class="ativo">Administração</a>
-            </nav>
-
-            <a href="#formularioLivro" class="botaoPrimario">Adicionar livro</a>
-        </div>
-    </header>
-
-    <main>
-        <section class="secaoAdmin">
-            <div class="container">
-                <div class="cabecalhoSecao">
-                    <span class="etiquetaSecao">Administração</span>
-
-                    <h1>Gerenciar acervo</h1>
-
-                    <p>Cadastre novos títulos e mantenha sua estante sempre em dia.</p>
-                </div>
-
-                <div class="gradeAdmin">
-                    <section class="cartaoAdmin cartaoFormulario" aria-labelledby="tituloFormulario">
-                        <div class="cabecalhoCartao">
-                            <h2 id="tituloFormulario">Novo livro</h2>
-
-                            <p>
-                                Preencha os dados a seguir e adicione um novo título
-                                à sua estante.
-                            </p>
-                        </div>
-
-                        <form id="formularioLivro" class="formularioLivro">
-                            <div class="grupoCampo">
-                                <label for="tituloLivro">Título</label>
-
-                                <input type="text" id="tituloLivro" name="tituloLivro"
-                                    placeholder="Ex: Memórias Póstumas de Brás Cubas" required />
-                            </div>
-
-                            <div class="linhaCampos">
-                                <div class="grupoCampo">
-                                    <label for="autorLivro">Autor</label>
-
-                                    <input type="text" id="autorLivro" name="autorLivro"
-                                        placeholder="Ex: Machado de Assis" required />
-                                </div>
-
-                                <div class="grupoCampo">
-                                    <label for="categoriaLivro">Categoria</label>
-
-                                    <select id="categoriaLivro" name="categoriaLivro" required>
-                                        <option value="">
-                                            Selecione uma categoria
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <fieldset class="grupoCampo grupoStatus">
-                                <legend>Status</legend>
-
-                                <div class="opcoesStatus">
-                                    <input type="radio" id="statusLido" name="statusLivro" value="Lido" checked />
-                                    <label for="statusLido">Lido</label>
-
-                                    <input type="radio" id="statusLendo" name="statusLivro" value="Lendo" />
-                                    <label for="statusLendo">Lendo</label>
-
-                                    <input type="radio" id="statusQueroLer" name="statusLivro" value="Quero ler" />
-                                    <label for="statusQueroLer">Quero ler</label>
-                                </div>
-                            </fieldset>
-
-                            <div class="grupoCampo">
-                                <label for="descricaoLivro">Descrição</label>
-
-                                <textarea id="descricaoLivro" name="descricaoLivro" placeholder="Uma breve sinopse..."
-                                    required></textarea>
-                            </div>
-
-                            <button type="submit" class="botaoPrimario botaoSalvar">
-                                Salvar livro
-                            </button>
-                        </form>
-                    </section>
-
-                    <section class="cartaoAdmin cartaoAcervo" aria-labelledby="tituloAcervo">
-                        <div class="cabecalhoCartao">
-                            <h2 id="tituloAcervo">Acervo cadastrado</h2>
-
-                            <p>
-                                <span id="totalLivrosAdmin">0</span>
-                                títulos na sua estante
-                            </p>
-                        </div>
-
-                        <div id="listaLivrosAdmin" class="listaLivrosAdmin"></div>
-                    </section>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="rodape">
-        <div class="container conteudoRodape">
-            <div class="marcaRodape">
+    <body>
+        <header class="cabecalho">
+            <div class="container conteudoCabecalho">
                 <a href="index.html" class="logo">
-                    <span class="iconeLogo">📖</span>
+                    <img src="./assets/logo.png" alt="Minha Estante" class="iconeLogo" />
                     <span>Minha <strong>Estante</strong></span>
                 </a>
 
-                <p>Sua biblioteca pessoal — organize, descubra e acompanhe cada leitura.</p>
+                <nav class="navegacaoCabecalho">
+                    <a href="index.html">Home</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="admin.html" class="ativo">Administração</a>
+                </nav>
+
+                <a href="#formularioLivro" class="botaoPrimario">Adicionar livro</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="secaoAdmin">
+                <div class="container">
+                    <div class="cabecalhoSecao">
+                        <span class="etiquetaSecao">Administração</span>
+
+                        <h1>Gerenciar acervo</h1>
+
+                        <p>Cadastre novos títulos e mantenha sua estante sempre em dia.</p>
+                    </div>
+
+                    <div class="gradeAdmin">
+                        <section
+                            class="cartaoAdmin cartaoFormulario"
+                            aria-labelledby="tituloFormulario"
+                        >
+                            <div class="cabecalhoCartao">
+                                <h2 id="tituloFormulario">Novo livro</h2>
+
+                                <p>
+                                    Preencha os dados a seguir e adicione um novo título à sua
+                                    estante.
+                                </p>
+                            </div>
+
+                            <form id="formularioLivro" class="formularioLivro">
+                                <div class="grupoCampo">
+                                    <label for="tituloLivro">Título</label>
+
+                                    <input
+                                        type="text"
+                                        id="tituloLivro"
+                                        name="tituloLivro"
+                                        placeholder="Ex: Memórias Póstumas de Brás Cubas"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="linhaCampos">
+                                    <div class="grupoCampo">
+                                        <label for="autorLivro">Autor</label>
+
+                                        <input
+                                            type="text"
+                                            id="autorLivro"
+                                            name="autorLivro"
+                                            placeholder="Ex: Machado de Assis"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="grupoCampo">
+                                        <label for="categoriaLivro">Categoria</label>
+
+                                        <select id="categoriaLivro" name="categoriaLivro" required>
+                                            <option value="">Selecione uma categoria</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <fieldset class="grupoCampo grupoStatus">
+                                    <legend>Status</legend>
+
+                                    <div class="opcoesStatus">
+                                        <input
+                                            type="radio"
+                                            id="statusLido"
+                                            name="statusLivro"
+                                            value="Lido"
+                                            checked
+                                        />
+                                        <label for="statusLido">Lido</label>
+
+                                        <input
+                                            type="radio"
+                                            id="statusLendo"
+                                            name="statusLivro"
+                                            value="Lendo"
+                                        />
+                                        <label for="statusLendo">Lendo</label>
+
+                                        <input
+                                            type="radio"
+                                            id="statusQueroLer"
+                                            name="statusLivro"
+                                            value="Quero ler"
+                                        />
+                                        <label for="statusQueroLer">Quero ler</label>
+                                    </div>
+                                </fieldset>
+
+                                <div class="grupoCampo">
+                                    <label for="descricaoLivro">Descrição</label>
+
+                                    <textarea
+                                        id="descricaoLivro"
+                                        name="descricaoLivro"
+                                        placeholder="Uma breve sinopse..."
+                                        required
+                                    ></textarea>
+                                </div>
+
+                                <button type="submit" class="botaoPrimario botaoSalvar">
+                                    Salvar livro
+                                </button>
+                            </form>
+                        </section>
+
+                        <section class="cartaoAdmin cartaoAcervo" aria-labelledby="tituloAcervo">
+                            <div class="cabecalhoCartao">
+                                <h2 id="tituloAcervo">Acervo cadastrado</h2>
+
+                                <p>
+                                    <span id="totalLivrosAdmin">0</span>
+                                    títulos na sua estante
+                                </p>
+                            </div>
+
+                            <div id="listaLivrosAdmin" class="listaLivrosAdmin"></div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            <div class="container conteudoRodape">
+                <div class="marcaRodape">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/logo.png" alt="Minha Estante" class="iconeLogo" />
+                        <span>Minha <strong>Estante</strong></span>
+                    </a>
+
+                    <p>Sua biblioteca pessoal — organize, descubra e acompanhe cada leitura.</p>
+                </div>
+
+                <nav class="navegacaoRodape">
+                    <h3>Navegação</h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="admin.html">Administração</a>
+                </nav>
             </div>
 
-            <nav class="navegacaoRodape">
-                <h3>Navegação</h3>
-
-                <a href="index.html">Home</a>
-                <a href="catalogo.html">Catálogo</a>
-                <a href="admin.html">Administração</a>
-            </nav>
-        </div>
-
-        <div class="baseRodape">
-            <div class="container">
-                <p>© 2026 Minha Estante. Todos os direitos reservados.</p>
+            <div class="baseRodape">
+                <div class="container">
+                    <p>© 2026 Minha Estante. Todos os direitos reservados.</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="js/dados.js"></script>
-    <script src="js/admin.js"></script>
-</body>
-
+        <script src="js/dados.js"></script>
+        <script src="js/admin.js"></script>
+    </body>
 </html>

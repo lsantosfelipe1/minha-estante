@@ -87,17 +87,14 @@ img {
     font-size: 1.1rem;
 }
 
+
 .iconeLogo {
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background: var(--marromEscuro);
-    color: var(--card);
-    display: grid;
-    place-items: center;
-    font-size: 0.9rem;
+    display: block;
+    object-fit: cover;
 }
-
 .logo strong {
     color: var(--marromClaro);
 }
